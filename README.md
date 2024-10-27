@@ -23,3 +23,7 @@ Plan:
 5. create click logging mechanic
 6. use the logging mechanic to count unique clicks
 7. use unique clicks to count score
+
+So the example uses an individual state for each card that is "clicked" as a boolean and then passes up props for each on click function so incrementing, and reseting if "clicked" is true, and randomizing. Those props live in a single handleClick function.
+
+It does seem like an individual state of clicked for each card would be the simplest, rather than trying to make a state for the whole grid and then tracking clicks that way.

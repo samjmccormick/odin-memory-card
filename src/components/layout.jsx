@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import InfoCard from "./card";
 import { useState } from "react";
 
@@ -49,19 +49,31 @@ function CardGrid() {
   ];
 
   const [positions, setPositions] = useState(cardArray);
+  const [count, setCount] = useState(0);
+
+  function counter(count) {
+    let counts = count;
+    counts += 1;
+    setCount(counts);
+  }
 
   function shuffleGrid(array) {
     let shuffleArray = array.slice(0);
     for (let i = shuffleArray.length - 1; i >= 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+      [shuffleArray[i], shuffleArray[j]] = [shuffleArray[j], shuffleArray[i]];
     }
-    console.log(shuffleArray);
     return shuffleArray;
   }
 
   function randomizeCards() {
     setPositions(shuffleGrid(positions));
+  }
+
+  function onClick() {
+    randomizeCards();
+    counter(count);
+    console.log(count);
   }
 
   return (
@@ -74,13 +86,11 @@ function CardGrid() {
               imgSource={card.url}
               cardTitle={card.title}
               cardText={card.text}
+              onClick={onClick}
             />
           </Col>
         ))}
       </Row>
-      <Button type="button" variant="primary" onClick={randomizeCards}>
-        Shuffle
-      </Button>
     </Container>
   );
 }
