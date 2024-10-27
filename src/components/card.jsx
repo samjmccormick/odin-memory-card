@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function InfoCard({ imgSource, cardTitle, cardText }) {
   return (
-    <Card>
+    <Card bg="dark" border="dark" text="white">
       <Card.Img variant="top" src={imgSource} />
       <Card.Body>
         <Card.Title>{cardTitle}</Card.Title>

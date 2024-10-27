@@ -1,0 +1,22 @@
+#root {
+  background-color: rgb(85, 84, 84);
+  height: 100vh;
+}
+
+.card {
+  width: 15rem;
+  margin-top: 2rem;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgb(194, 194, 194);
+}
+
+#header {
+  color: white;
+}
+
+.headerRow {
+  align-items: center;
+}
