@@ -1,9 +1,9 @@
 import { Card } from "react-bootstrap";
 import PropTypes from "prop-types";
 
-function InfoCard({ imgSource, cardTitle, cardText, onClick }) {
+function InfoCard({ imgSource, cardTitle, cardText }) {
   return (
-    <Card bg="dark" border="dark" text="white" onClick={onClick}>
+    <Card bg="dark" border="dark" text="white">
       <Card.Img variant="top" src={imgSource} />
       <Card.Body>
         <Card.Title>{cardTitle}</Card.Title>
@@ -17,8 +17,6 @@ InfoCard.propTypes = {
   imgSource: PropTypes.string,
   cardText: PropTypes.string,
   cardTitle: PropTypes.string,
-
-  onClick: PropTypes.func,
 };
 
 export default InfoCard;

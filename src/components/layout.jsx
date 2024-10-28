@@ -48,14 +48,8 @@ function CardGrid() {
     },
   ];
 
-  const [positions, setPositions] = useState(cardArray);
-  const [count, setCount] = useState(0);
-
-  function counter(count) {
-    let counts = count;
-    counts += 1;
-    setCount(counts);
-  }
+  const [positions, setPositions] = useState(shuffleGrid(cardArray));
+  const [clickedCards, setClickedCards] = useState([]);
 
   function shuffleGrid(array) {
     let shuffleArray = array.slice(0);
@@ -66,14 +60,16 @@ function CardGrid() {
     return shuffleArray;
   }
 
+  // eslint-disable-next-line no-unused-vars
   function randomizeCards() {
     setPositions(shuffleGrid(positions));
   }
 
-  function onClick() {
-    randomizeCards();
-    counter(count);
-    console.log(count);
+  function handleCardClick(id) {
+    if (!clickedCards.includes(id)) {
+      setClickedCards((prev) => [...prev, id]);
+      console.log(clickedCards);
+    }
   }
 
   return (
@@ -86,7 +82,7 @@ function CardGrid() {
               imgSource={card.url}
               cardTitle={card.title}
               cardText={card.text}
-              onClick={onClick}
+              onClick={handleCardClick(card.id)}
             />
           </Col>
         ))}
