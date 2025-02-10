@@ -7,11 +7,11 @@ function InfoCard({ imgSource, cardTitle, cardText, onClick, id }) {
   }
 
   return (
-    <Card bg="dark" border="dark" text="white" onClick={handleClick}>
+    <Card bg="dark" border="secondary" text="white" onClick={handleClick}>
       <Card.Img variant="top" src={imgSource} />
       <Card.Body>
         <Card.Title>{cardTitle}</Card.Title>
-        <Card.Text>{cardText}</Card.Text>
+        <Card.Text>- {cardText}</Card.Text>
       </Card.Body>
     </Card>
   );

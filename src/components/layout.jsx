@@ -6,45 +6,57 @@ import PropTypes from "prop-types";
 const cardArray = [
   {
     id: 0,
-    url: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZjajBpZjllYXFmaGdyemh1cjV5bXJ3ZTl4dTVjeTUxb3F4MmRwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0IylOPCNkiqOgMyA/giphy.gif",
-    title: "Pepe Silvia",
-    text: "have a coffee and cigarette to calm down",
+    url: "https://robohash.org/s",
+    title: "John Doe",
+    text: "You'll never find me again",
   },
   {
     id: 1,
-    url: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZjajBpZjllYXFmaGdyemh1cjV5bXJ3ZTl4dTVjeTUxb3F4MmRwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0IylOPCNkiqOgMyA/giphy.gif",
-    title: "Pepe bannana",
-    text: "have a coffee sets estest to tes down",
+    url: "https://robohash.org/ssa",
+    title: "Slim Jim",
+    text: "ironic name",
   },
   {
     id: 2,
-    url: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZjajBpZjllYXFmaGdyemh1cjV5bXJ3ZTl4dTVjeTUxb3F4MmRwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0IylOPCNkiqOgMyA/giphy.gif",
-    title: "54fs64ef465efa654",
-    text: "hgenerjericic",
+    url: "https://robohash.org/sfff",
+    title: "Tiny Tim",
+    text: "unironic name",
   },
   {
     id: 3,
-    url: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZjajBpZjllYXFmaGdyemh1cjV5bXJ3ZTl4dTVjeTUxb3F4MmRwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0IylOPCNkiqOgMyA/giphy.gif",
-    title: "22222222222",
-    text: "222222222222222",
+    url: "https://robohash.org/safsd",
+    title: "Vacuum Cleaner",
+    text: "A Roomba took my job",
   },
   {
     id: 4,
-    url: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZjajBpZjllYXFmaGdyemh1cjV5bXJ3ZTl4dTVjeTUxb3F4MmRwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0IylOPCNkiqOgMyA/giphy.gif",
-    title: "33333333333333",
-    text: "33333333333333",
+    url: "https://robohash.org/sfaf",
+    title: "33333333333",
+    text: "3?",
   },
   {
     id: 5,
-    url: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZjajBpZjllYXFmaGdyemh1cjV5bXJ3ZTl4dTVjeTUxb3F4MmRwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0IylOPCNkiqOgMyA/giphy.gif",
-    title: "4444444444444",
-    text: "4444444444",
+    url: "https://robohash.org/sefe",
+    title: "Thermo-Stat",
+    text: "Brings the heat",
   },
   {
     id: 6,
-    url: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZjajBpZjllYXFmaGdyemh1cjV5bXJ3ZTl4dTVjeTUxb3F4MmRwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0IylOPCNkiqOgMyA/giphy.gif",
-    title: "55555555",
-    text: "have a coffee and cigarette to calm down",
+    url: "https://robohash.org/swef",
+    title: "Artificial Intelligence",
+    text: "Could be smarter",
+  },
+  {
+    id: 7,
+    url: "https://robohash.org/swdsef",
+    title: "Marvin",
+    text: "Boop beep boop beep",
+  },
+  {
+    id: 8,
+    url: "https://robohash.org/swefsfaf",
+    title: "Calculon",
+    text: "The best actor of all time",
   },
 ];
 
@@ -78,10 +90,10 @@ function CardGrid({ incrementScore, endRound }) {
   }
 
   return (
-    <Container>
+    <Container style={{ maxWidth: "950px" }}>
       <Row>
         {positions.map((card, index) => (
-          <Col key={index}>
+          <Col key={index} className="d-flex flex justify-content-center ">
             <InfoCard
               key={card.id}
               imgSource={card.url}
